@@ -61,7 +61,7 @@ function checkAnswer(){
         alert ("Hey! You got it right! :)")
         incrementScore();
     } else {
-        alert (`Awww..... You answered ${userAnswer}. The correct answer was ${calculatedAnswer}! :(`)
+        alert (`Your answer ${userAnswer} sucked. The correct answer was ${calculatedAnswer}! :(`)
         incrementWrongScore();
     }
 
@@ -73,10 +73,10 @@ function calculateCorrectAnswer(){
 
 let operand1 = parseInt(document.getElementById(`operand1`).innerText);
 let operand2 = parseInt(document.getElementById(`operand2`).innerText);
-let operator = document.getElementById(`operator`).innerText;
+let operator = document.getElementById("operator").innerText;
 
 if (operator ==="+"){
-    return [operand1 + operand2,"addition"];
+    return [operand1 + operand2, "addition"];
 }   
     else if (operator === "x"){
         return [operand1 * operand2, "multiply"]
